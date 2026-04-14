@@ -11,7 +11,7 @@ if [ ! -f "paper.jar" ]; then
         printf "PAPER_DOWNLOAD variable unset or empty. This must be a direct download link to a paper jar file.\nHead to https://papermc.io/downloads/paper"
         exit 1
     fi
-    wget $PAPER_DOWNLOAD -O "$GAMEDIR/paper.jar"
+    wget "$PAPER_DOWNLOAD" -O "$GAMEDIR/paper.jar"
     java -jar "$GAMEDIR/paper.jar" --nogui
     sed -i "s/false/true/g" "$GAMEDIR/eula.txt"
 fi
