@@ -8,7 +8,7 @@ cd $GAMEDIR
 if [ ! -f "paper.jar" ]; then
     # A download link must be provided otherwise complain
     if [ -z "$PAPER_DOWNLOAD" ]; then
-        printf "PAPER_DOWNLOAD variable unset or empty. This must be a direct download link to a paper jar file.\nHead to https://papermc.io/downloads/paper"
+        printf "PAPER_DOWNLOAD variable unset or empty. This must be a direct download link to a paper jar file.\nHead to https://papermc.io/downloads/paper\n"
         exit 1
     fi
     wget "$PAPER_DOWNLOAD" -O "$GAMEDIR/paper.jar"
